@@ -1,0 +1,41 @@
+<!--
+ /**
+ *Name: artist.html
+ *Description: Home page for the SpotInfo App
+ *@Authors:
+ *Paul Ryan Olivar
+ *Joel Andrew Simard
+ *Matthew Ong
+ *@Since: 01/30/14
+ *
+ **/
+ -->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script src="getInfo.js"></script>
+        <script type="text/javascript" src="drawData.js"></script>
+    </head>
+    
+  <h1> Welcome to the SpotInfo application</h1>
+    
+    
+    <body>
+        
+        
+        <form>
+            Artist name: <br>
+            <input id="artistname" type="text" name="artist">
+                </form>
+        
+        <button id="searchButton" onClick = "executeSearch()" >Search for Artist</button>
+        
+        
+        <div id="search_results">
+            
+        </div>
+        
+    </body>
+</html>

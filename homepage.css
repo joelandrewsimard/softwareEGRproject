@@ -1,0 +1,19 @@
+#navbar {
+    list-style-type: none;
+    background-color:black;
+    width:200;
+}
+
+
+#navbar li{
+
+    display:inline;
+    margin-left:20px;
+    margin-right:20px;
+    
+}
+
+#navbar a{
+    color:green;
+    
+}
