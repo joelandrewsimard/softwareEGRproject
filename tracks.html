@@ -17,24 +17,25 @@
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script src="getInfo.js"></script>
         <script type="text/javascript" src="drawData.js"></script>
+        <script type="text/javascript" src="tracks.js"></script>
         <link rel="stylesheet" type="text/css" href="prettify.css">
-    </head>
+            </head>
     
-  <h1> <a id="header" href="index.html">Welcome to the SpotInfo application</a></h1>
+    <h1> <a id="header" href="index.html">Welcome to the SpotInfo application</a></h1>
     
     
-    <body>
+    <body onload="setListeners()">
         
-        
-        <form>
-            Artist name: <br>
-            <input id="artistname" type="text" name="artist">
-                </form>
-        
-        <button id="searchButton" onClick = "executeSearch()" >Search for Artist</button>
-        
-        
+
         <div id="search_results">
+            <select id="genres">
+                <option value="Overall">Newest</option>
+                <option value="Reggae">Reggae</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+            </select>
+            
+            <button id="visualizeTracks">Visualize most popular tracks</button>
             
         </div>
         

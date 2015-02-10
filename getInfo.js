@@ -16,9 +16,12 @@ var tracks, artistArray;
 
 //Create a map that holds artists and the popularities of their top songs.
 var artistTracks={};
+//Create a map that holds artist albums and their popularities
+var artistAlbums={};
+
+
 
 //Search for a given artist
-
 /**
 *executeSearch()
 * Reads from HTML input field and searches for that given artist
@@ -125,7 +128,7 @@ function artistStats(id){
                    
                                       tracks = data.tracks;
                    
-                                      printInfo(data.tracks);
+                                      printInfo(id, data.tracks);
                                       console.log("Success in getting top tracks!");
                                       
                    });
@@ -134,16 +137,16 @@ function artistStats(id){
 
 
 
-//Function to print the info of a given tracks array.
+//Function to print the info of a given tracks/albums/artists array.
 /**
  *printinfo(tracks)
- * Stores the most popular tracks and outputs them to index.html
+ * Stores the most popular tracks/albums and outputs them to index.html
  *@param tracks
- * An array of track objects
+ * An array of track/album objects
  *@return none
  *
  **/
-function printInfo(tracks){
+function printInfo(id, tracks){
     
     if(tracks==null){
         
@@ -156,9 +159,26 @@ function printInfo(tracks){
         document.getElementById("search_results").innerHTML = "";
         console.log("Array not null");
         
-        $("#search_results").append("<button id='visualize'>Visualize data</button>");
-        $("#visualize").click(function(){
-                              drawChart(artistTracks);
+        
+        //add buttons
+        $("#search_results").append("<button id='tracks'>Visualize most popular tracks</button>");
+        
+        $("#search_results").append("<button id='albums'>Visualize most popular albums</button>");
+        
+        
+        
+        //add an event listener to visualize artist albums
+        $("#albums").click(function(){
+                           getAlbums(id);
+                           
+                           });
+        
+        //add an event listener to visualize artist tracks
+        $("#tracks").click(function(){
+                           
+                           var x = "Name";
+                           var y = "Popularity";
+                              drawChart(artistTracks,x,y,"Top tracks");
                               
                               });
         
@@ -184,6 +204,66 @@ function printInfo(tracks){
         
     }
 }
+
+
+
+function getAlbums(artistID){
+    
+    //array that holds the IDs of top 20 albums
+    var albumIDs = [];
+    
+    var simpleurl = 'https://api.spotify.com/v1/artists/'+artistID+'/albums';
+    var fullurl="https://api.spotify.com/v1/albums?ids=";
+    var holder;
+    
+    $.getJSON(simpleurl, function(data){
+              //iterate through every simple album and add it to the "several albums" API endpoint
+              for(i=0; i<data.items.length; i++){
+              holder=data.items[i].id;
+              if (i===0){
+              
+              fullurl+=holder;
+              
+              }
+              else{
+              fullurl+=","+holder;
+              
+              }
+              
+              }
+              
+              console.log("The full URL is "+fullurl);
+              
+              
+              $.getJSON(fullurl, function(data){
+                        
+                        artistAlbums={};
+                        
+                        for(i=0; i<data.albums.length;i++){
+                      
+                        artistAlbums[data.albums[i].name]=data.albums[i].popularity;
+                        
+                        }
+                        
+                        
+                        console.log(artistAlbums);
+                        
+                        console.log("DRAWING THE CHART");
+                        drawChart(artistAlbums,"Name","Popularity","Top Albums");
+                        
+                        });
+              
+              
+              
+              
+              
+              });
+
+    
+}
+
+
+
 
 
 

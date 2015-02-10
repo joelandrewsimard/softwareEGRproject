@@ -7,11 +7,11 @@
  *Outputs the visualization of the top tracks onto the webpage
  *
  **/
-function drawChart(arr) {
+function drawChart(arr,x,y,title) {
     // Create the data table.
     var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Song');
-    data.addColumn('number', 'Popularity');
+    data.addColumn('string', x);
+    data.addColumn('number', y);
     
     
     for(var key in arr){
@@ -20,7 +20,7 @@ function drawChart(arr) {
     }
     
     // Set chart options
-    var options = {'title':'Top tracks',
+    var options = {'title':title,
         'width':600,
         'height':300};
     

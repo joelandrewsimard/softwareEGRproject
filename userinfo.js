@@ -42,9 +42,6 @@ function userSearch(){
                    document.getElementById("user_results").innerHTML="<p> Display name:"+ data.display_name+"</p> \n ";
                    
                    
-                   
-        
-                   
                     document.getElementById("user_results").innerHTML += "<a href="+"'"+data.external_urls.spotify+"'"+">Check out user's page </a>";
                    
                    }

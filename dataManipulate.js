@@ -16,11 +16,11 @@ else{
     document.getElementById("search_results").innerHTML = "";
     console.log("Array not null");
     
-    $("#search_results").append("<button id='visualize'>Visualize data</button>");
-    $("#visualize").click(function(){
-                          drawChart(artistTracks);
+   // $("#search_results").append("<button id='visualize'>Visualize data</button>");
+    //$("#visualize").click(function(){
+      //                    drawChart(artistTracks);
                           
-                          });
+        //                  });
     
     //reset the artistTracks object before putting anything in it
     artistTracks={};

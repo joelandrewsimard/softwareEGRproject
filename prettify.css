@@ -1,0 +1,26 @@
+#navbar {
+    list-style-type: none;
+    background-color:black;
+    width:280;
+}
+
+
+#navbar li{
+
+    display:inline;
+    margin-left:20px;
+    margin-right:20px;
+    
+}
+
+#navbar a{
+    color:green;
+    
+}
+
+#header {
+    
+    text-decoration:none;
+    color:RGB(66,66,33);
+    
+}
