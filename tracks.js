@@ -2,10 +2,22 @@
 
 function setListeners(){
 $('#genres').on('change', function() {
-                alert(this.value); // or $(this).val()
+                popularTracks(this.value);
                 
                 });
+    
+    //visualize overall tracks as a default
 
+    overallTracks();
+}
+
+
+overallTracks(){
+    
+    alert("Not implemented yet");
+    
+    
+    
 }
 
 function popularTracks(genre){
@@ -14,16 +26,17 @@ function popularTracks(genre){
     
     if (genre==="overall"){
         
-        console.log("overall");
+        alert("The genre selected is "+ genre);
+
         
     }
     else{
         
-        
+        alert("The genre selected is "+ genre);
+
         
     }
     
-    alert("The genre selected is "+ $("#genres").val);
-
+    
 }
 
