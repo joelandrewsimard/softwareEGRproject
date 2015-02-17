@@ -28,7 +28,7 @@
         
         <form>
             Artist name: <br>
-            <input id="artistname" type="text" name="artist">
+            <input id="artistname" onkeydown="if (event.keyCode == 13) { executeSearch(); return false; }" type="text" name="artist">
                 </form>
         
         <button id="searchButton" onClick = "executeSearch()" >Search for Artist</button>
