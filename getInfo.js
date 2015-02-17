@@ -19,13 +19,6 @@ var artistTracks={};
 //Create a map that holds artist albums and their popularities
 var artistAlbums={};
 
-//$("#artistname").keyup(function(event){
-//                          if(event.keyCode == 13){
-//                       
-//                       console.log("ENTER PRESSED ");
-//                          $("#searchButton").click();
-//                          }
-//                          });
 
 
 //Search for a given artist
@@ -39,6 +32,9 @@ var artistAlbums={};
 **/
 function executeSearch(){
     var searchTerm, url;
+    
+    //clear any widgets
+    $("#charts").empty();
     
     searchTerm = document.getElementById("artistname").value;
     
