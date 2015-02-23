@@ -17,23 +17,21 @@
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script src="getInfo.js"></script>
   <script type="text/javascript" src="drawData.js"></script>
-  <link rel="stylesheet" type="text/css" href="prettify.css">
   <script type="text/javascript">
         function extractRequest() {
-            var path = window.location.pathname;
-            //start at =
-            //end at &  
-            var size = path.length;
-            alert(path.substring(6,size));
+            var path = window.location.href;
+            var goldenTicket = path.substring(45,(path.length-18)); 
+            alert(goldenTicket);    
         }
-        window.onload = codeAddress;
   </script>
+  <link rel="stylesheet" type="text/css" href="prettify.css">
+  <script>window.onload=extractRequest ; </script>
 </head>
 
 <h1> Welcome to the Spoticus</h1>
 
 
-<body>
+<body onload = "extractRequest()">
 
     <h3> What data would you like to view?</h3>
     
