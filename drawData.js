@@ -10,6 +10,7 @@
 function drawChart(arr,x,y,title) {
     // Create the data table.
     var data = new google.visualization.DataTable();
+   
     data.addColumn('string', x);
     data.addColumn('number', y);
     
@@ -19,6 +20,8 @@ function drawChart(arr,x,y,title) {
         
     }
     
+    //sort data according to popularity
+     data.sort({column: 1, desc: true});
     // Set chart options
     var options = {'title':title,
         'width':600,
