@@ -19,6 +19,9 @@ var artistTracks={};
 //Create a map that holds artist albums and their popularities
 var artistAlbums={};
 
+//Create a map that holds album names and their IDs
+var albumIDS = {};
+
 
 
 //Search for a given artist
@@ -181,7 +184,7 @@ function printInfo(id, tracks){
                            
                            var x = "Name";
                            var y = "Popularity";
-                              drawChart(artistTracks,x,y,"Top tracks");
+                              drawChart(artistTracks,x,y,"Top tracks","tracks","search_results");
                               
                               });
         
@@ -223,6 +226,8 @@ function getAlbums(artistID){
               //iterate through every simple album and add it to the "several albums" API endpoint
               for(i=0; i<data.items.length; i++){
               holder=data.items[i].id;
+              var name = data.items[i].name
+              albumIDS[name] = data.items[i].id;
               if (i===0){
               
               fullurl+=holder;
@@ -252,7 +257,7 @@ function getAlbums(artistID){
                         console.log(artistAlbums);
                         
                         console.log("DRAWING THE CHART");
-                        drawChart(artistAlbums,"Name","Popularity","Top Albums");
+                        drawChart(artistAlbums,"Name","Popularity","Top Albums","albums","search_results");
                         
                         });
               
