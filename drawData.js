@@ -36,7 +36,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
     // Set chart options
     var options = {'title':title,
         'width':800,
-        'height':5 00};
+        'height':500};
     
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.ColumnChart(document.getElementById(divID));
