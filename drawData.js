@@ -118,7 +118,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
 
                                                             artistTracks[data.tracks[j].name] = data.tracks[j].popularity;
                                             
-                                            drawChart(artistTracks,"Name","Popularity","Top tracks","tracks","charts");
+                                            drawChart(artistTracks,"Name","Popularity","Top tracks for selected album" ,"tracks","charts");
                                                         }
 
                                                     });
