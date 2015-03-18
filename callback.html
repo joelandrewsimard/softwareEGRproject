@@ -18,11 +18,14 @@
   <script src="getInfo.js"></script>
   <script type="text/javascript" src="drawData.js"></script>
   <script type="text/javascript">
+
+      var globalTicket;
         function extractRequest() {
             var path = window.location.href;
             var goldenTicket = path.substring(45,(path.length-18)); 
             alert(goldenTicket);    
-        }
+            globalTicket = goldenTicket;
+                }
   </script>
   <link rel="stylesheet" type="text/css" href="prettify.css">
   <script>window.onload=extractRequest ; </script>
