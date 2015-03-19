@@ -41,3 +41,37 @@ iframe{
     display:inline-block;
     
 }
+
+.myButton {
+    background-color:#5b7a20;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border:1px solid #5b7a20;
+    display:inline-block;
+    cursor:pointer;
+    color:#dbd8db;
+    font-family:Verdana;
+    font-size:25px;
+    padding:25px 55px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background-color:#80b71a;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+h1 {
+    text-align: center;
+}
+h4 {
+    text-align: center;
+ }
+h2 {
+    text-align: center;
+}
+
+#head b{color:green;}
