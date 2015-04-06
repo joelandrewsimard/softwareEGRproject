@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git add .
+git commit -m 'Made changes'
+git push https://github.com/olivar16/olivar16.github.io.git

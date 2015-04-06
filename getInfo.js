@@ -272,6 +272,19 @@ function getAlbums(artistID){
 
 
 
+      var accessCode;
+        function extractRequest() {
+            var path = window.location.href;
+            var goldenTicket = window.location.href.substring(53,window.location.href.length - 52);; 
+           
+            alert(goldenTicket);  
+            accessCode = goldenTicket;
+                }
+
+
+
+
+                
 function showFeatured(){
 
 console.log("Access code is "+ accessToken);
