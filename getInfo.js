@@ -272,6 +272,14 @@ function getAlbums(artistID){
 
 
 
+function getInfo(){
+
+console.log("Access code is "+ accessToken);
+
+
+}
+
+
 
 
 
