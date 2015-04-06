@@ -281,7 +281,7 @@ function getAlbums(artistID){
             
             alert(goldenTicket);  
             accessToken = goldenTicket;
-           
+           console.log(accessToken);
                 }
 
 
