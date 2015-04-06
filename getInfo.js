@@ -280,7 +280,7 @@ function getAlbums(artistID){
             var goldenTicket = window.location.href.substring(53,window.location.href.length - 52);; 
            
             alert(goldenTicket);  
-            accessCode = goldenTicket;
+            accessToken = goldenTicket;
                 }
 
 
