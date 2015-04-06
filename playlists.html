@@ -1,7 +1,7 @@
 <!-- 
 /**
-*Name: index.html
-*Description: Home page for the SpotInfo App
+*Name: playlists.html
+*Description: Playlist page for the SpotInfo App
 *@Authors:
 *Paul Ryan Olivar
 *Joel Andrew Simard
@@ -17,20 +17,8 @@
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script src="getInfo.js"></script>
   <script type="text/javascript" src="drawData.js"></script>
-  <script type="text/javascript">
-
-      var accessCode;
-        function extractRequest() {
-            var path = window.location.href;
-            var goldenTicket = window.location.href.substring(53,window.location.href.length - 52);; 
-           
-            alert(goldenTicket);  
-            accessCode = goldenTicket;
-                }
-  </script>
   <link rel="stylesheet" type="text/css" href="prettify.css">
 <link href='bootstrap/css/bootstrap.css' rel='stylesheet'>
-  <script>window.onload=extractRequest ; </script>
 </head>
 
 
@@ -65,7 +53,7 @@
       <a href="tracks.html"class="myButton">Tracks</a>
     </div>
     <div class='col-md-3'>
-      <a href = "playlists.html"class="myButton">Playlists</a>
+      <a class="myButton">Playlists</a>
     </div>
   </div>
     
