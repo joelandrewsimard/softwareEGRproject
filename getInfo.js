@@ -263,10 +263,7 @@ function getAlbums(artistID){
                         drawChart(artistAlbums,"Name","Popularity","Top Albums","albums","search_results");
                         
                         });
-              
-              
-              
-              
+
               
               });
 
@@ -281,8 +278,10 @@ function getAlbums(artistID){
             var goldenTicket = window.location.href.substring(53,window.location.href.length - 52); 
             
             alert(goldenTicket);  
-            userInfo.accessToken = window.location.href.substring(53,window.location.href.length - 52);
-           console.log("user info access token is " + userInfo.accessToken);
+            //accessToken = window.location.href.substring(53,window.location.href.length - 52);
+
+            accessToken = 10;
+           console.log("user info access token is " + accessToken);
                 }
 
 
