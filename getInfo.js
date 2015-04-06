@@ -24,6 +24,7 @@ var artistAlbums={};
 //Create a map that holds album names and their IDs
 var albumIDS = {};
 
+userInfo = {};
 
 
 //Search for a given artist
@@ -280,7 +281,7 @@ function getAlbums(artistID){
             var goldenTicket = window.location.href.substring(53,window.location.href.length - 52);; 
             
             alert(goldenTicket);  
-            accessToken = goldenTicket;
+            userInfo.accessToken = goldenTicket;
            console.log(accessToken);
                 }
 
@@ -290,7 +291,7 @@ function getAlbums(artistID){
 
 function showFeatured(){
 
-console.log("Access code is "+ accessToken);
+console.log("Access code is "+ userInfo.accessToken);
 
 
 }
