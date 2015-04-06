@@ -14,7 +14,7 @@
 //Global variables to hold tracks and artists
 var tracks, artistArray;
 //Holds login access token
-var accessToken = "";
+var accessToken;
 
 //Create a map that holds artists and the popularities of their top songs.
 var artistTracks={};
