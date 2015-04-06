@@ -272,7 +272,7 @@ function getAlbums(artistID){
 
 
 
-function getInfo(){
+function showFeatured(){
 
 console.log("Access code is "+ accessToken);
 
