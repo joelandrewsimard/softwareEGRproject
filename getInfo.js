@@ -13,6 +13,8 @@
 
 //Global variables to hold tracks and artists
 var tracks, artistArray;
+//Holds login access token
+var accessToken;
 
 //Create a map that holds artists and the popularities of their top songs.
 var artistTracks={};
@@ -272,7 +274,7 @@ function getAlbums(artistID){
 
 
 
-      var accessCode;
+      
         function extractRequest() {
             var path = window.location.href;
             var goldenTicket = window.location.href.substring(53,window.location.href.length - 52);; 
@@ -284,7 +286,7 @@ function getAlbums(artistID){
 
 
 
-                
+
 function showFeatured(){
 
 console.log("Access code is "+ accessToken);
