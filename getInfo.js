@@ -214,6 +214,15 @@ function printInfo(id, tracks){
     }
 }
 
+//Function to get the albums of a given artist.
+/**
+ *getAlbums(artistID)
+ * Stores the artist's albums
+ *@param artistID
+ * A string that holds an artist id number
+ *@return none
+ *
+ **/
 
 
 function getAlbums(artistID){
@@ -290,7 +299,7 @@ function getAlbums(artistID){
 
 function showFeatured(){
 
-console.log("Access code is "+ userInfo.accessToken);
+console.log("Access code is "+ accessToken);
 
 
 }
