@@ -290,7 +290,9 @@ function getAlbums(artistID){
             //accessToken = window.location.href.substring(53,window.location.href.length - 52);
             var temp = goldenTicket;
             accessToken = temp;
-           console.log("user info access token is " + accessToken);
+
+            setAccessToken(accessToken);
+           
                 }
 
 
@@ -305,7 +307,11 @@ console.log("Access code is "+ accessToken);
 }
 
 
+function setAccessToken(token){
 
+accessToken = token;
+
+}
 
 
 
