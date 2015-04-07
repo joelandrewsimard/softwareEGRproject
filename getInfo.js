@@ -319,6 +319,7 @@ accessToken = token;
 
 function featuredPlaylists(){
 
+alert("coming soon!");
 // // var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
 
 // // $(".container .row #buttonRow .col-md-3").each(function(){
