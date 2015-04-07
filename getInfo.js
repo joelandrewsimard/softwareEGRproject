@@ -319,44 +319,44 @@ accessToken = token;
 
 function featuredPlaylists(){
 
-// var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
+// // var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
 
-// $(".container .row #buttonRow .col-md-3").each(function(){
+// // $(".container .row #buttonRow .col-md-3").each(function(){
 
-// $(this).html(button.pop());
+// // $(this).html(button.pop());
 
+// // });
+
+// $.ajax({
+//    url: 'https://api.spotify.com/v1/browse/featured-playlists',
+//    headers: {
+//        'Authorization': 'Bearer ' + accessToken
+//    },
+//    success: function(response) {
+//        console.log(response);
+//  $("#search_results").append("<div class='row'>"+
+//     "<div class='col-md-12'>"+
+//       "<h1>"+ response.message+"</h1>"+
+//     "</div>"+
+//   "</div>");
+
+// $("#search_results").append("<div class='row'>");
+// //assign values to playlistIDs
+//  for(i=0;i<response.playlists.items.length;i++){
+
+//  playlistIDs[response.playlists.items[i].name].=response.playlists.items[i].id;
+
+// var imgURL = response.playlists.items[i].images[0].url;
+// console.log("image url to be put is "+imgURL);
+
+
+//  }
+
+// $("#search_results").append("</div>");
+
+
+//    }
 // });
-
-$.ajax({
-   url: 'https://api.spotify.com/v1/browse/featured-playlists',
-   headers: {
-       'Authorization': 'Bearer ' + accessToken
-   },
-   success: function(response) {
-       console.log(response);
- $("#search_results").append("<div class='row'>"+
-    "<div class='col-md-12'>"+
-      "<h1>"+ response.message+"</h1>"+
-    "</div>"+
-  "</div>");
-
-$("#search_results").append("<div class='row'>");
-//assign values to playlistIDs
- for(i=0;i<response.playlists.items.length;i++){
-
- playlistIDs[response.playlists.items[i].name].=response.playlists.items[i].id;
-
-var imgURL = response.playlists.items[i].images[0].url;
-console.log("image url to be put is "+imgURL);
-
-
- }
-
-$("#search_results").append("</div>");
-
-
-   }
-});
 
 
 }
