@@ -18,20 +18,30 @@
         <script src="getInfo.js"></script>
         <script type="text/javascript" src="drawData.js"></script>
         <link rel="stylesheet" type="text/css" href="prettify.css">
+        <link href='bootstrap/css/bootstrap.css' rel='stylesheet'>
     </head>
     
-  <h1> <a id="header" href="index.html">Welcome to Spoticus</a></h1>
-    
-    
-    <body>
-        
-        
+    <body style="background-color:black">
+        <div class='navbar navbar-inverse navbar-static-top'>
+            <div class='container-fluid'>
+                 <a href= 'index.html' class='navbar-brand'> Spoticus </a> 
+                <ul class='nav nav-pills navbar-nav navbar-right'id="navbar" > 
+                    <li><a href="artist.html">Artists</a></li>
+                    <li><a href="userInfo.html">Users</a></li>
+                    <li><a href="tracks.html">Tracks</a></li>
+                    <li><a href="https://accounts.spotify.com/authorize/?client_id=70160e7c2cb8458088a359d137fb60ad&response_type=code&redirect_uri=http%3A%2F%2Folivar16.github.io/callback.html&scope=user-read-private%20user-read-email&state=34fFs29kd09">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    <div class='container'>
         <form>
-            Artist name: <br>
+            <font color=999999 size="5"> Artist name: </font>
+            <br>
             <input id="artistname" onkeydown="if (event.keyCode == 13) { executeSearch(); return false; }" type="text" name="artist">
                 </form>
         
         <button id="searchButton" onClick = "executeSearch()" >Search for Artist</button>
+        
         <br>
         
         
@@ -41,10 +51,11 @@
         </div>
         
         <div id="charts">
-            
-            
-            
         </div>
+            
+            
+            
+     </div>
         
     </body>
 </html>

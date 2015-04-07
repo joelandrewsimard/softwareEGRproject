@@ -1,5 +1,11 @@
 #!/bin/bash
+<<<<<<< HEAD
 
 git add .
 git commit -m 'Made changes'
 git push https://github.com/olivar16/olivar16.github.io.git
+=======
+git add .
+git commit -m "matt committing"
+git push origin updatedCSS
+>>>>>>> a7f526c94a703d235a920bcb16361fb2b9572b77

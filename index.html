@@ -24,36 +24,51 @@
 
 
 
-<body>
+<body style="background-color:black">
+  <div class='navbar navbar-inverse navbar-static-top'>
+    <div class='container-fluid'>
+      <a href= 'index.html' class='navbar-brand'> Spoticus </a> 
+      <ul class='nav nav-pills navbar-nav navbar-right'id="navbar" > 
+        <li><a href="artist.html">Artists</a></li>
+        <li><a href="userInfo.html">Users</a></li>
+        <li><a href="tracks.html">Tracks</a></li>
+        <li><a href="https://accounts.spotify.com/authorize/?client_id=70160e7c2cb8458088a359d137fb60ad&response_type=code&redirect_uri=http%3A%2F%2Folivar16.github.io/callback.html&scope=user-read-private%20user-read-email&state=34fFs29kd09">Log In</a></li>
+       </ul>
+    </div>
+   </div>
+  <!-- Contains the tile text-->
   <div class='container'>
     <div class=row'row'>
     <div class='col-md-12'>
-      <h1> Welcome to Scrapify </h1>
-    </div>
-  </div>
-    <div class=row'row'>
-    <div class='col-md-12'>
-      <h4> by Spoticus </h4>
+      <h1><font color=999999> We are Spoticus </font></h1>
     </div>
   </div>
   <div class=row'row'>
     <div class='col-md-12'>
-      <h2> What data would you like to view?</h2>
+      <h2 class='lead'> <font color=999999>What data would you like to view?</font></h2>
     </div>
   </div>
+  </div>
+
+  <div class='container'>
    <div class=row'row'>
+
     <div class='col-md-3'>
       <a href="artist.html" class="myButton">Artist</a>
     </div>
+
     <div class='col-md-3'>
       <a href="userInfo.html"class="myButton">User</a>
     </div>
+
     <div class='col-md-3'>
       <a href="tracks.html"class="myButton">Tracks</a>
     </div>
+
     <div>
       <a href="https://accounts.spotify.com/authorize/?client_id=70160e7c2cb8458088a359d137fb60ad&response_type=token&redirect_uri=http%3A%2F%2Folivar16.github.io/callback.html&scope=user-read-private%20user-read-email&state=34fFs29kd09"class="myButton">Login</a>
     </div>
+<<<<<<< HEAD
   </div>
 
     <!--<ul id="navbar"> 
@@ -67,12 +82,14 @@
         <li><a href="https://accounts.spotify.com/authorize/?client_id=70160e7c2cb8458088a359d137fb60ad&response_type=code&redirect_uri=http%3A%2F%2Folivar16.github.io/callback.html&scope=user-read-private%20user-read-email&state=34fFs29kd09">Log In</a></li>
     </ul>-->
 
+=======
+>>>>>>> a7f526c94a703d235a920bcb16361fb2b9572b77
     
     <div id="search_results">
-
     </div>
+   </div>
+  </div>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
-  </div>
 </body>
 </html>
