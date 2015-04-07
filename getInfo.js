@@ -343,7 +343,7 @@ $.ajax({
 
  for(i=0;i<response.playlists.items.length;i++){
 
-playlistIDs[response.playlists.items[i].name]=response.playlists.items[i].id;
+playlistIDs[response.playlists.items[i].name].=response.playlists.items[i].id;
 
  }
 
