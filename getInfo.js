@@ -330,11 +330,11 @@ $.ajax({
    },
    success: function(response) {
        console.log(response);
- $("#search_results").append("<div class='row'>
-    <div class='col-md-12'>
-      <h1>"+ response.message+"</h1>
-    </div>
-  </div>");
+ $("#search_results").append("<div class='row'>"+
+    "<div class='col-md-12'>"+
+      "<h1>"+ response.message+"</h1>"+
+    "</div>"+
+  "</div>");
 
 
 
