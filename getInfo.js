@@ -340,12 +340,19 @@ $.ajax({
     "</div>"+
   "</div>");
 
-
+$("#search_results").append("<div class='row'>");
+//assign values to playlistIDs
  for(i=0;i<response.playlists.items.length;i++){
 
-playlistIDs[response.playlists.items[i].name].=response.playlists.items[i].id;
+ playlistIDs[response.playlists.items[i].name].=response.playlists.items[i].id;
+
+var imgURL = response.playlists.items[i].images[0].url;
+console.log("image url to be put is "+imgURL);
+
 
  }
+
+$("#search_results").append("</div>");
 
 
    }
