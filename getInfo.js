@@ -313,15 +313,26 @@ accessToken = token;
 
 }
 
-function playlistButtons(){
+function featuredPlaylists(){
 
-var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
+// var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
 
-$(".container .row #buttonRow .col-md-3").each(function(){
+// $(".container .row #buttonRow .col-md-3").each(function(){
 
-$(this).html(button.pop());
+// $(this).html(button.pop());
 
+// });
+
+$.ajax({
+   url: 'https://api.spotify.com/v1/browse/featured-playlists',
+   headers: {
+       'Authorization': 'Bearer ' + accessToken
+   },
+   success: function(response) {
+       console.log(response);
+   }
 });
+
 
 }
 
