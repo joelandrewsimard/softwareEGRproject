@@ -24,7 +24,11 @@ var artistAlbums={};
 //Create a map that holds album names and their IDs
 var albumIDS = {};
 
-userInfo = {};
+var userInfo = {};
+
+//Create a map that holds playlists and their ids
+var playlistIDs={};
+
 
 
 //Search for a given artist
@@ -336,6 +340,12 @@ $.ajax({
     "</div>"+
   "</div>");
 
+
+ for(i=0;i<response.playlists.items.length;i++){
+
+playlistIDs[response.playlists.items[i].name]=response.playlists.items[i].id;
+
+ }
 
 
    }
