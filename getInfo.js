@@ -313,5 +313,16 @@ accessToken = token;
 
 }
 
+function playlistButtons(){
+
+var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
+
+$(".container .row #buttonRow .col-md-3").each(function(){
+
+$(this).html(button.pop());
+
+});
+
+}
 
 
