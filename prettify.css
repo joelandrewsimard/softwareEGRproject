@@ -1,46 +1,28 @@
-#navbar {
+/*    #navbar {
     list-style-type: none;
     background-color:black;
     width:380;
 }
-
-
 #navbar li{
-
     display:inline;
     margin-left:20px;
     margin-right:20px;
-    
 }
-
 #navbar a{
-    color:green;
-    
+    color:orange;
 }
-
 #header {
-    
     text-decoration:none;
     color:RGB(66,66,33);
-    
 }
-
 #charts{
-    
-   
 }
-
 iframe{
-    
     display:inline-block;
-    
 }
-
 #search_results{
-    
-    display:inline-block;
-    
-}
+    display:inline-block;  
+}*/
 
 .myButton {
     background-color:#5b7a20;
@@ -58,20 +40,58 @@ iframe{
 }
 .myButton:hover {
     background-color:#80b71a;
+    text-decoration:none;
+    color:262626;
 }
 .myButton:active {
     position:relative;
     top:1px;
 }
 
+
 h1 {
-    text-align: center;
-}
-h4 {
     text-align: center;
  }
 h2 {
     text-align: center;
 }
 
-#head b{color:green;}
+#head b{
+    color:green;
+}
+.well{
+    background: rgba(0, 0, 255, 0.9);
+}
+
+.navbar{
+    color:#81b71a;
+}
+
+.userresults{
+    color:#81b71a;
+}
+
+#user_results{
+    color: blue;
+}
+#user_results a:hover{
+    color: red;
+}
+#search_results {
+    color:red;
+
+}
+#search_results a{
+    color:red;
+    
+}
+#tracks{
+    color:green; 
+}
+#albums{
+    color:green; 
+}
+#searchButton{
+    color:red;
+}
+
