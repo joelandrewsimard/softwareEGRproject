@@ -351,7 +351,7 @@ $("#search_results").append("<div class='row'>");
 //var imgURL = response.playlists.items[i].images[0].url;
 //console.log("image url to be put is "+imgURL);
 
-var c = ""getPlaylistTracks("+"asdfasdfasdF"+ ")"";
+//var c = ""getPlaylistTracks("+"asdfasdfasdF"+ ")"";
 //response.playlists.items[i].id
 
 //$("#search_results").append(response.playlists.items[i].name+"<br>");
