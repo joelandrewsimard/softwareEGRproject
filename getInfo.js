@@ -319,7 +319,7 @@ accessToken = token;
 
 function featuredPlaylists(){
 
-alert("coming soon!");
+
 // var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
 
 // $(".container .row #buttonRow .col-md-3").each(function(){
@@ -353,7 +353,7 @@ $("#search_results").append("<div class='row'>");
 
 $("#search_results").append(response.playlists.items[i].name+"<br>");
 $("#search_results").append(response.playlists.items[i].images[0].url+"<br>");
-
+console.log("added "+response.playlists.items[i].images[0].url+" as image url");
  }
 
 $("#search_results").append("</div>");
