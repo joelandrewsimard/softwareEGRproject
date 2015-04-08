@@ -355,7 +355,7 @@ var c = ""getPlaylistTracks("+"asdfasdfasdF"+ ")"";
 //response.playlists.items[i].id
 
 //$("#search_results").append(response.playlists.items[i].name+"<br>");
-$("#search_results").append("<a onClick='"+'alert("clicked!")'+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>");
+$("#search_results").append("<a onClick='"+'alert("asdfasdf")'+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>");
 //getPlaylistTracks("+response.playlists.items[i].id+")
 
 
