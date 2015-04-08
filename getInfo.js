@@ -352,6 +352,7 @@ $("#search_results").append("<div class='row'>");
 //console.log("image url to be put is "+imgURL);
 
 $("#search_results").append(response.playlists.items[i].name+"<br>");
+$("#search_results").append(response.playlists.items[i].images[0].url+"<br>");
 
  }
 
