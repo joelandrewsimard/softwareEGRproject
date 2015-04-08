@@ -351,11 +351,13 @@ $("#search_results").append("<div class='row'>");
 //var imgURL = response.playlists.items[i].images[0].url;
 //console.log("image url to be put is "+imgURL);
 
+var c = "getPlaylistTracks("+response.playlists.items[i].id+")";
 
 
 //$("#search_results").append(response.playlists.items[i].name+"<br>");
-$("#search_results").append("<a onClick='"+'alert("asdfasdf")'+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>");
+$("#search_results").append("<a onClick='"+c+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>");
 //getPlaylistTracks("+response.playlists.items[i].id+")
+
 
 
  }
