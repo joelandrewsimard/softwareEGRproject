@@ -351,9 +351,13 @@ $("#search_results").append("<div class='row'>");
 //var imgURL = response.playlists.items[i].images[0].url;
 //console.log("image url to be put is "+imgURL);
 
+
+
 //$("#search_results").append(response.playlists.items[i].name+"<br>");
-$("#search_results").append("<a href='"+""+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>");
-console.log("added "+response.playlists.items[i].images[0].url+" as image url");
+$("#search_results").append("<a onClick='"+"getPlaylistTracks("+response.playlists.items[i].id+")"+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>");
+
+
+
  }
 
 $("#search_results").append("</div>");
@@ -364,5 +368,15 @@ $("#search_results").append("</div>");
 
 
 }
+
+function getPlaylistTracks(id){
+
+
+console.log("The playlist id is"+ id);
+
+
+}
+
+
 
 
