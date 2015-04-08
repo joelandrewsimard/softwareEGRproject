@@ -352,7 +352,7 @@ $("#search_results").append("<div class='row'>");
 //console.log("image url to be put is "+imgURL);
 
 $("#search_results").append(response.playlists.items[i].name+"<br>");
-$("#search_results").append(response.playlists.items[i].images[0].url+"<br>");
+$("#search_results").append("<a href='"+""+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>"+ "<br>");
 console.log("added "+response.playlists.items[i].images[0].url+" as image url");
  }
 
