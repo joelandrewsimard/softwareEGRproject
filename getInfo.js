@@ -320,13 +320,6 @@ accessToken = token;
 function featuredPlaylists(){
 
 
-// var button = ["Playlists", "Featured playlists", "User playlists","Playlists by category"];
-
-// $(".container .row #buttonRow .col-md-3").each(function(){
-
-// $(this).html(button.pop());
-
-// });
 
 $.ajax({
    url: 'https://api.spotify.com/v1/browse/featured-playlists',
