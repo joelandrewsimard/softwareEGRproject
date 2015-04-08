@@ -370,13 +370,5 @@ $("#search_results").append("</div>");
 }
 
 function getPlaylistTracks(id){
-
-
 console.log("The playlist id is"+ id);
-
-
 }
-
-
-
-
