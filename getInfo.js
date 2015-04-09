@@ -375,20 +375,20 @@ $.ajax({
    url: requestURL,
    headers: {
        'Authorization': 'Bearer ' + accessToken
-   },
+            },
    success: function(response) {
        console.log(response);
 
        for(i=0;i<response.items.length;i++){
         playlistMap[response.items[i].track.name+" by "+ response.items[i].track.artists[0].name] = response.items[i].track.popularity;
         
-       }
+                                           }
 
-}
+                              }
  statusCode:{ 404: function(){
     alert("Alert! page not found, please try again");
-  }
-}
+                              }
+          }
 
    }
 );
