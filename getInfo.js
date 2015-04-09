@@ -376,6 +376,12 @@ $.ajax({
    },
    success: function(response) {
        console.log(response);
+
+       for(i=0;i<response.items.length;i++){
+
+        console.log(response.items.tracks[i].name);
+       }
+
 }
    }
 );
