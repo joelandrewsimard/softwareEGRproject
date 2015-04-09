@@ -366,7 +366,7 @@ $("#search_results").append("</div>");
 
 function getPlaylistTracks(id){
 console.log("The playlist id is"+ id);
-
+var playlistMap = {};
 var requestURL = "https://api.spotify.com/v1/users/spotify/playlists/"+id+"/tracks";
 
 $.ajax({
@@ -379,7 +379,7 @@ $.ajax({
 
        for(i=0;i<response.items.length;i++){
 
-        console.log(response.items[i].track.name);
+        console.log(response.items[i].track.name+" by "+ response.items[i].track.artists[0].name);
        }
 
 }
