@@ -12,7 +12,8 @@
 
 
 //Global variables to hold tracks and artists
-var tracks, artistArray;
+var artistArray;
+var tracks = [];
 //Holds login access token
 var accessToken;
 
@@ -382,6 +383,7 @@ $.ajax({
        for(i=0;i<response.items.length;i++){
         playlistMap[response.items[i].track.name+" by "+ response.items[i].track.artists[0].name] = response.items[i].track.popularity;
         
+        tracks[i] = {};
         tracks[i].name = response.items[i].track.name;
         tracks[i].uri = response.items[i].track.uri;
 
