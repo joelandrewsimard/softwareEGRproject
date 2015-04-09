@@ -59,7 +59,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
                                             var uri  = tracks[i].uri;
                                             
                                             $("#charts").append('<iframe src="'+"https://embed.spotify.com/?uri="+uri+'"width="300" height="380" frameborder="0" allowtransparency="true"></iframe>');
-                                            
+                                            console.log("Appended charts div");
                                             }
                                             
                                             }
