@@ -388,7 +388,7 @@ $.ajax({
    }
 );
 
-
+drawChart(playlistMap,'Song','Popularity','Most popular songs',"tracks","search_results");
 
 
 }
