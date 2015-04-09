@@ -389,5 +389,5 @@ $.ajax({
 );
 
 
-drawChart(playlistMap,"Name","Popularity","Most popular songs","tracks","search_results");
+//drawChart(playlistMap,"Name","Popularity","Most popular songs","tracks","search_results");
 }
