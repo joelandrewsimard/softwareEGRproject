@@ -385,6 +385,11 @@ $.ajax({
        }
 
 }
+ statusCode:{ 404: function(){
+    alert("Alert! page not found, please try again");
+  }
+}
+
    }
 );
 
