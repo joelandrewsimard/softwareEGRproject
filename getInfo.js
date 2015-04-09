@@ -387,6 +387,8 @@ $.ajax({
 
 console.log("Playlistmap is currently: ");
 console.log(playlistMap);
+drawChart(playlistMap,"Title","Popularity","Playlist song popularity", "tracks", "search_results");
+
 
                               }
  
@@ -398,7 +400,3 @@ console.log(playlistMap);
 }
 
 
-function getplaylistMap(){
-
-return playlistMap;
-}
