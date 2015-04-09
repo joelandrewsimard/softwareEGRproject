@@ -379,7 +379,7 @@ $.ajax({
    success: function(response) {
        console.log(response);
 
-       for(i=0;i<response.items.length;i++){3
+       for(i=0;i<response.items.length;i++){
         playlistMap[response.items[i].track.name+" by "+ response.items[i].track.artists[0].name] = response.items[i].track.popularity;
         
        }
