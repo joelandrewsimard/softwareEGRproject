@@ -369,8 +369,7 @@ function getPlaylistTracks(id){
 console.log("The playlist id is"+ id);
 
 var requestURL = "https://api.spotify.com/v1/users/spotify/playlists/"+id+"/tracks";
-//make sure playlistMap is empty
-playlistMap={};
+
 $.ajax({
    url: requestURL,
    headers: {
@@ -378,7 +377,8 @@ $.ajax({
             },
    success: function(response) {
        console.log(response);
-
+       //make sure playlistMap is empty
+    playlistMap={};
        for(i=0;i<response.items.length;i++){
         playlistMap[response.items[i].track.name+" by "+ response.items[i].track.artists[0].name] = response.items[i].track.popularity;
         
