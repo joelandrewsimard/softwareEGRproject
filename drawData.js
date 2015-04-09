@@ -15,7 +15,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
     }
     else if(graphType==="tracks"){
         console.log("graph type is tracks");
-        console.log("DRAWING "+ arr);
+        console.log(arr);
     }
 
     // Create the data table.
