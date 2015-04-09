@@ -379,7 +379,7 @@ $.ajax({
 
        for(i=0;i<response.items.length;i++){
 
-        console.log(response.items.tracks[i].name);
+        console.log(response.items.tracks[i].track.name);
        }
 
 }
