@@ -386,13 +386,19 @@ $.ajax({
 
 
 console.log("Playlistmap is currently ");
-console.log(playlistMap);
+console.log(getplaylistMap());
 
                               }
  
 
    }
 );
+
+function getplaylistMap(){
+
+return playlistMap;
+}
+}
 
 
 //drawChart(playlistMap,"Name","Popularity","Most popular songs","tracks","search_results");
