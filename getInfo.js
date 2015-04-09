@@ -384,10 +384,11 @@ $.ajax({
         
         tracks[i].name = response.items[i].track.name;
         tracks[i].uri = response.items[i].track.uri;
+
                                            }
 
 
-console.log("Playlistmap is currently: ");
+console.log("Playlistmap is currently! ");
 console.log(playlistMap);
 drawChart(playlistMap,"Title","Popularity","Playlist song popularity", "tracks", "search_results");
 
