@@ -385,8 +385,8 @@ $.ajax({
                                            }
 
 
-console.log("Playlistmap is currently ");
-console.log(getplaylistMap());
+console.log("Playlistmap is currently: ");
+console.log(playlistMap);
 
                               }
  
