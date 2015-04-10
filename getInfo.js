@@ -321,7 +321,8 @@ accessToken = token;
 
 function featuredPlaylists(){
 
-
+$("#search_results").empty();
+$("#charts").empty();
 
 $.ajax({
    url: 'https://api.spotify.com/v1/browse/featured-playlists',
