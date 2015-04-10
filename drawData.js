@@ -53,7 +53,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
                                             //search for the track to find its uri
                                             
                                             for(i=0;i<tracks.length;i++){
-                                            
+                                            console.log("Looking for track");
                                             if(tracks[i].name === data.getValue(selected[0].row, 0)){
                                             console.log("The tracks was found with uri: "+ tracks[i].uri);
                                             var uri  = tracks[i].uri;
