@@ -292,8 +292,8 @@ function getAlbums(artistID){
             var path = window.location.href;
             var goldenTicket = window.location.href.substring(53,window.location.href.length - 52); 
             
-            alert(goldenTicket);  
-            //accessToken = window.location.href.substring(53,window.location.href.length - 52);
+       
+           
             var temp = goldenTicket;
             accessToken = temp;
 
@@ -342,19 +342,8 @@ $("#search_results").append("<div class='row'>");
 //assign values to playlistIDs
  for(i=0;i<response.playlists.items.length;i++){
 
- //playlistIDs[response.playlists.items[i].name].=response.playlists.items[i].id;
 
-//var imgURL = response.playlists.items[i].images[0].url;
-//console.log("image url to be put is "+imgURL);
-
-//var c = ""getPlaylistTracks("+"asdfasdfasdF"+ ")"";
-//response.playlists.items[i].id
-
-//$("#search_results").append(response.playlists.items[i].name+"<br>");
-//$("#search_results").append("<a onClick='"+'alert("asdfasdf")'+"'>"+ "<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>");
-//getPlaylistTracks("+response.playlists.items[i].id+")
-
-$("#search_results").append("<a onClick='" + 'getPlaylistTracks("'+response.playlists.items[i].id+'")'+"'>"+"<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>"+"<br>" );
+$("#search_results").append("<a onClick='" + 'getPlaylistTracks("'+response.playlists.items[i].id+'")'+"'>"+"<img src='"+response.playlists.items[i].images[0].url+"'>"+"</img>"+"</a>" );
 
  }
 
