@@ -396,8 +396,31 @@ drawChart(playlistMap,"Title","Popularity","Playlist song popularity", "tracks",
 
 function userData(){
 
+$.ajax({
+   url: "https://api.spotify.com/v1/me/tracks?limit=50",
+   headers: {
+       'Authorization': 'Bearer ' + accessToken
+   },
+   success: function(response) {
+//ensure that artist tracks is empty before putting data in it.
+artistTracks={};
+for(i=0;i<response.items.length;i++){
+        artistTracks[response.items[i].track.name+" by "+ response.items[i].track.artists[0].name] = response.items[i].track.popularity;
+        
+        tracks[i] = {};
+        tracks[i].name = response.items[i].track.name+" by "+ response.items[i].track.artists[0].name;
+        tracks[i].uri = response.items[i].track.uri;
 
-  
+        drawChart(artistTracks,"Name","Popularity","Popularity of user saved tracks", "tracks", "search_results") 
+
+
+                                           }
+
+       
+   }
+});
+
+
 }
 
 
