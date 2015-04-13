@@ -433,7 +433,7 @@ for(i=0;i<response.items.length;i++){
         tracks[i].name = response.items[i].track.name+" by "+ response.items[i].track.artists[0].name;
         tracks[i].uri = response.items[i].track.uri;
 
-        drawChart(artistTracks,"Name","Popularity","Popularity of user saved tracks", "tracks", "search_results") 
+        drawChart(artistTracks,"Name","Popularity","Popularity of user saved tracks", "tracks", "charts"); 
 
 
                                            }
