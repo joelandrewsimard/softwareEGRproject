@@ -28,7 +28,7 @@
             <form>
                 <font color=999999 size="5"> Please enter a Username: </font> 
                 <br>
-                <input id="username" type="text" name="user" onkeydown='id(event.keycode===13){userSearch();}'>
+                <input id="username" type="text" name="user" onkeydown='if(event.keycode===13){userSearch();}'>
             </form>
         
             <button id="user" onClick="userSearch()" >Search for user</button>
