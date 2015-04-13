@@ -402,8 +402,9 @@ $.ajax({
        'Authorization': 'Bearer ' + accessToken
    },
    success: function(response) {
-    $("#search_results").append('<iframe src="//giphy.com/embed/moZM0cd3y7x2U" width="200" height="200" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
-        $("#search_results").append("Barfing user info");
+    $("#search_results").append("<h3>Barfing user info</h3><br>");
+    $("#search_results").append('<iframe src="//giphy.com/embed/moZM0cd3y7x2U" width="200" height="200" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><br>');
+        
 
 
        if(response.display_name != null){
