@@ -397,6 +397,28 @@ drawChart(playlistMap,"Title","Popularity","Playlist song popularity", "tracks",
 function userData(){
 
 $.ajax({
+   url: 'https://api.spotify.com/v1/me',
+   headers: {
+       'Authorization': 'Bearer ' + accessToken
+   },
+   success: function(response) {
+    $("#search_results").html('<iframe src="//giphy.com/embed/moZM0cd3y7x2U" width="200" height="200" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+        $("#search_results").html("Barfing user info");
+
+
+       if(response.display_name != null){
+        $("#search_results").append("<h5>Display name:"+ response.display_name+"</h5>");
+       }
+       if(response.country != null){
+        $("#search_results").append("<h5>Country:"+ response.country+"</h5>");
+       }
+
+   }
+});
+
+
+
+$.ajax({
    url: "https://api.spotify.com/v1/me/tracks?limit=50",
    headers: {
        'Authorization': 'Bearer ' + accessToken
