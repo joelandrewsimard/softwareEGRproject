@@ -11,7 +11,6 @@ $('#genres').on('change', function() {
     
     //visualize overall tracks as a default
 
-    overallTracks();
 }
 
 
