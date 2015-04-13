@@ -408,12 +408,17 @@ $.ajax({
 
 
        if(response.display_name != null){
-        $("#search_results").append("<h5>Display name:"+ response.display_name+"</h5>");
+        $("#search_results").append("<h5>Display name:"+ response.display_name+"</h5><br>");
+       }
+       if(response.id != null){
+        $("#search_results").append("<h5>ID:"+ response.ID+"</h5><br>");
        }
        if(response.country != null){
-        $("#search_results").append("<h5>Country:"+ response.country+"</h5>");
+        $("#search_results").append("<h5>Country:"+ response.country+"</h5><br>");
        }
-
+       if(response.email != null){
+        $("#search_results").append("<h5>Email:"+ response.email+"</h5><br>");
+       }
    }
 });
 
