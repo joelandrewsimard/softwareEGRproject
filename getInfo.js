@@ -402,7 +402,7 @@ $.ajax({
        'Authorization': 'Bearer ' + accessToken
    },
    success: function(response) {
-    $("#search_results").html('<iframe src="//giphy.com/embed/moZM0cd3y7x2U" width="200" height="200" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+    $("#search_results").append('<iframe src="//giphy.com/embed/moZM0cd3y7x2U" width="200" height="200" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
         $("#search_results").append("Barfing user info");
 
 
