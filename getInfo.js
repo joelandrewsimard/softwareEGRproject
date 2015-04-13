@@ -410,7 +410,7 @@ $.ajax({
        if(response.display_name != null){
         $("#search_results").append("<h5>Display name:"+ response.display_name+"</h5><br>");
        }
-       if((response.id != null) && (response.id != undefined){
+       if((response.id != null) && (response.id != undefined)){
         $("#search_results").append("<h5>ID:"+ response.ID+"</h5><br>");
        }
        if(response.country != null){
