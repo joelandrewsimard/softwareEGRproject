@@ -27,6 +27,7 @@ function popularTracks(genre){
     
 var requestUrl = 'https://api.spotify.com/v1/browse/categories/'+genre+'/playlists';
 
+   var accessToken = localStorage.getItem("Access Token");
 
     $.ajax({
    url: requestUrl,
