@@ -361,11 +361,11 @@ function getPlaylistTracks(id){
 console.log("The playlist id is"+ id);
 
 var requestURL = "https://api.spotify.com/v1/users/spotify/playlists/"+id+"/tracks";
-
+var token  = localStorage["Access Token"];
 $.ajax({
    url: requestURL,
    headers: {
-       'Authorization': 'Bearer ' + accessToken
+       'Authorization': 'Bearer ' + token
             },
    success: function(response) {
        console.log(response);
