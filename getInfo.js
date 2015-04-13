@@ -1,3 +1,4 @@
+
 /**
  *Name: getInfo.js
  *Description: A script that contains functions that send requests to the spotify API
@@ -296,7 +297,7 @@ function getAlbums(artistID){
            
             var temp = goldenTicket;
             accessToken = temp;
-
+            localStorage.setItem("Access Token",accessToken);
             setAccessToken(accessToken);
            
                 }
