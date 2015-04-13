@@ -432,6 +432,8 @@ $.ajax({
    success: function(response) {
 //ensure that artist tracks is empty before putting data in it.
 artistTracks={};
+
+console.log("drawing graphs");
 for(i=0;i<response.items.length;i++){
         artistTracks[response.items[i].track.name+" by "+ response.items[i].track.artists[0].name] = response.items[i].track.popularity;
         
