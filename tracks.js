@@ -64,6 +64,7 @@ $("#playlistSelection").append("</select>");
 function selectPlaylist(id){
 
 console.log("The playlist selected is "+id);
+console.log("Getting playlist tracks");
 getPlaylistTracks(id);
 
 
