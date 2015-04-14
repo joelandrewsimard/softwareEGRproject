@@ -44,6 +44,11 @@ $("#playlistSelection").append("<select id ='playlists'>");
                                                         }
 
 $("#playlistSelection").append("</select>");
+
+  $('#genres').on('change', function() {
+                selectPlaylist(this.value);
+                
+                });
         //iterate through every playlist and create a list 
        console.log(response);
        console.log("The ID is "+response.playlists.items[0].id);;
@@ -55,11 +60,9 @@ $("#playlistSelection").append("</select>");
     
 }
 
-function selectPlaylist(){
+function selectPlaylist(id){
 
-$("#playlistSelection").append("");
-
-
+console.log("The playlist selected is "+id);
 }
 
 function appendPlaylists(name, id){
