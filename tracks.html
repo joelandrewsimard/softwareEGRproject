@@ -19,13 +19,63 @@
         <script type="text/javascript" src="drawData.js"></script>
         <script type="text/javascript" src="tracks.js"></script>
         <link rel="stylesheet" type="text/css" href="prettify.css">
+        <link href='bootstrap/css/bootstrap.css' rel='stylesheet'>
             </head>
     
      <h1> <a id="header" href="index.html">Welcome to Spoticus</a></h1>
     
     
-    <body onload="setListeners()">
-        
+    <body onload="setListeners()" style="background-color:black">
+
+  <div class='navbar navbar-inverse navbar-static-top'>
+    <div class='container-fluid'>
+      <a href= 'index.html' class='navbar-brand'> Spoticus </a> 
+      <ul class='nav nav-pills navbar-nav navbar-right'id="navbar" > 
+        <li><a href="artist.html">Artists</a></li>
+        <li><a href="userInfo.html">Users</a></li>
+        <li><a href="tracks.html">Tracks</a></li>
+        <li><a href="https://accounts.spotify.com/authorize/?client_id=70160e7c2cb8458088a359d137fb60ad&response_type=code&redirect_uri=http%3A%2F%2Folivar16.github.io/callback.html&scope=user-read-private%20user-read-email&state=34fFs29kd09">Log In</a></li>
+       </ul>
+    </div>
+   </div>
+  <!-- Contains the tile text-->
+  <div class='container'>
+    <div class=row'row'>
+    <div class='col-md-12'>
+      <h1><font color=999999> We are Spoticus </font></h1>
+    </div>
+  </div>
+  <div class=row'row'>
+    <div class='col-md-12'>
+      <h2 class='lead'> <font color=999999>What data would you like to view?</font></h2>
+    </div>
+  </div>
+  </div>
+
+  <div class='container'>
+   <div class=row'row'>
+
+    <div class='col-md-3'>
+      <a href="artist.html" class="myButton">Artist</a>
+    </div>
+
+    <div class='col-md-3'>
+      <a href="userInfo.html"class="myButton">User</a>
+    </div>
+
+    <div class='col-md-3'>
+      <a href="tracks.html"class="myButton">Tracks</a>
+    </div>
+
+    <div>
+      <a href="https://accounts.spotify.com/authorize/?client_id=70160e7c2cb8458088a359d137fb60ad&response_type=token&redirect_uri=http%3A%2F%2Folivar16.github.io/callback.html&scope=user-read-private%20user-read-email%20user-library-read&state=34fFs29kd09"class="myButton">Login</a>
+    </div>
+
+  </div>
+
+
+
+
 
         <div id="selection">
             <select id="genres">

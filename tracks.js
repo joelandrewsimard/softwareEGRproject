@@ -63,10 +63,4 @@ function selectPlaylist(id){
 getPlaylistTracks(id);
 }
 
-function appendPlaylists(name, id){
-
-
-
-
-}
 
