@@ -45,7 +45,7 @@ $("#playlistSelection").append("<select id ='playlists'>");
 
 $("#playlistSelection").append("</select>");
 
-  $('#genres').on('change', function() {
+  $('#playlists').on('change', function() {
                 selectPlaylist(this.value);
                 
                 });
