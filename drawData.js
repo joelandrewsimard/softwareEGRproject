@@ -38,7 +38,15 @@ function drawChart(arr,x,y,title, graphType, divID) {
         'width':800,
         'height':500,
          backgroundColor: 'black',
-          colors: ['red','yellow', 'blue']};
+          colors: ['green'],
+          hAxis: {
+    textStyle:{color: 'white'}
+                },
+        vAxis: { textStyle: {color: 'white'} },
+        legend: {textStyle: {color:'white'}},
+        titleTextStyle: {color: 'white'}
+
+     };
     
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.ColumnChart(document.getElementById(divID));
