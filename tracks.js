@@ -1,7 +1,5 @@
 
 
-var genreIDs={'Mood':'mood', 'Party':'party', 'Pop':'pop','Rock':'rock', 'Indie Alternative':'indie_alt', 'EDM Dance':'edm_dance',
-                'Hip Hop':'hiphop', 'RnB':'rnb', 'Country':'country','Folk Americana':'folk_americana','Metal':'metal','Soul':'soul'};
 
 function setListeners(){
 $('#genres').on('change', function() {
@@ -21,7 +19,7 @@ function overallTracks(){
 
 function popularTracks(genre){
     
-var requestUrl = 'https://api.spotify.com/v1/browse/categories/'+genre+'/playlists';
+var requestUrl = 'https://api.spotify.com/v1/browse/categories/'+genre+'/playlists?limit=50';
 
    var accessToken = localStorage.getItem("Access Token");
 
@@ -62,12 +60,7 @@ $("#playlistSelection").append("</select>");
 }
 
 function selectPlaylist(id){
-
-console.log("The playlist selected is "+id);
-console.log("Getting playlist tracks");
 getPlaylistTracks(id);
-
-
 }
 
 function appendPlaylists(name, id){
