@@ -36,7 +36,7 @@ $("#playlistSelection").append("<select id ='playlists'>");
 
         playlistIds ={};
 
-        for(i=0;i<response.playlists.items[i].length;i++){
+        for(i=0;i<response.playlists.items.length;i++){
         playlistIDs[response.playlists.items[i].name]=response.playlists.items[i].id;
         $("#playlistSelection").append("<option value='"+response.playlists.items[i].id+"'>"+response.playlists.items[i].name+"</option>");
 
