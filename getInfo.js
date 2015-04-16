@@ -285,7 +285,7 @@ function getAlbums(artistID){
     
 }
 
-**
+/*
 *extractRequest()
 * Gets the access token after the user logs in
 *@param none
@@ -304,7 +304,7 @@ function extractRequest() {
                 }
 
 
-**
+/**
 *setAccessToken()
 * Setter method to set the global access token
 *@param token
@@ -358,7 +358,7 @@ $("#search_results").append("</div>");
 
 }
 
-**
+/**
 *getPlaylistTracks()
 * Get the tracks for a given playlist
 *@param id
@@ -368,7 +368,6 @@ $("#search_results").append("</div>");
 **/
 function getPlaylistTracks(id){
 console.log("The playlist id is"+ id);
-
 var requestURL = "https://api.spotify.com/v1/users/spotify/playlists/"+id+"/tracks";
 var token  = localStorage["Access Token"];
 $.ajax({
