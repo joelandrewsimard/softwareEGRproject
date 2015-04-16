@@ -316,7 +316,7 @@ function setAccessToken(token){
 accessToken = token;
 }
 
-**
+/**
 *featuredPlaylists()
 * Requests the most current featured playlists from the Spotify API
 *@param none
