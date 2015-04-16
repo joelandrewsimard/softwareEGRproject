@@ -403,6 +403,13 @@ drawChart(playlistMap,"Title","Popularity","Playlist song popularity", "tracks",
 
 }
 
+/**
+*userData()
+* Get the information about the user
+*@param 
+*@return none
+*
+**/
 function userData(){
 
 $.ajax({
