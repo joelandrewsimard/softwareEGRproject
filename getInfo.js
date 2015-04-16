@@ -15,26 +15,27 @@
 //Global variables to hold tracks and artists
 var artistArray;
 var tracks = [];
+
 //Holds login access token
 var accessToken;
 
 //Create a map that holds artists and the popularities of their top songs.
 var artistTracks={};
+
 //Create a map that holds artist albums and their popularities
 var artistAlbums={};
 
 //Create a map that holds album names and their IDs
 var albumIDS = {};
 
-var userInfo = {};
-
 //Create a map that holds playlists and their ids
 var playlistIDs={};
 
-var playlistResponse;
 
+//Create a map that is used after making a request to get a playlist's songs. It stores the song's artists and their popularities
 var playlistMap = {};
-//Search for a given artist
+
+
 /**
 *executeSearch()
 * Reads from HTML input field and searches for that given artist
@@ -230,8 +231,6 @@ function printInfo(id, tracks){
  *@return none
  *
  **/
-
-
 function getAlbums(artistID){
     
     //array that holds the IDs of top 20 albums
@@ -286,15 +285,17 @@ function getAlbums(artistID){
     
 }
 
-
-
-      
-        function extractRequest() {
+**
+*extractRequest()
+* Gets the access token after the user logs in
+*@param none
+*@return none
+*calls the outputSearchResults() function
+*
+**/
+function extractRequest() {
             var path = window.location.href;
             var goldenTicket = window.location.href.substring(53,window.location.href.length - 52); 
-            
-       
-           
             var temp = goldenTicket;
             accessToken = temp;
             localStorage.setItem("Access Token",accessToken);
@@ -303,25 +304,26 @@ function getAlbums(artistID){
                 }
 
 
-
-
-
-function showFeatures(){
-
-console.log("Access code is "+ accessToken);
-
-
-}
-
-
+**
+*setAccessToken()
+* Setter method to set the global access token
+*@param token
+* The access token of the user
+*@return none
+*
+**/
 function setAccessToken(token){
-console.log("Setting access token to " + token);
 accessToken = token;
-
 }
 
+**
+*featuredPlaylists()
+* Requests the most current featured playlists from the Spotify API
+*@param none
+*@return none
+*
+**/
 function featuredPlaylists(){
-
 $("#search_results").empty();
 $("#charts").empty();
 
@@ -331,7 +333,6 @@ $.ajax({
        'Authorization': 'Bearer ' + accessToken
    },
    success: function(response) {
-    playlistresponse = response;
        console.log(response);
  $("#search_results").append("<div class='row'>"+
     "<div class='col-md-12'>"+
@@ -357,6 +358,14 @@ $("#search_results").append("</div>");
 
 }
 
+**
+*getPlaylistTracks()
+* Get the tracks for a given playlist
+*@param id
+* A playlist id
+*@return none
+*
+**/
 function getPlaylistTracks(id){
 console.log("The playlist id is"+ id);
 
