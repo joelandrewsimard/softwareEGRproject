@@ -52,7 +52,12 @@ $("#playlistSelection").append("</select>");
        console.log(response);
        console.log("The ID is "+response.playlists.items[0].id);;
        getPlaylistTracks(response.playlists.items[0].id);
-   }
+   },
+   statusCode: {
+    401: function() {
+      alert( "page not found" );
+    }
+  }
 });
     
     
