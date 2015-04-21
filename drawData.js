@@ -43,7 +43,8 @@ function drawChart(arr,x,y,title, graphType, divID) {
     textStyle:{color: 'white'}
                 },
         vAxis: { textStyle: {color: 'white'},
-                  viewWindow{max:100} },
+                  viewWindow: {max:100, 
+                            min:0} },
         legend: {textStyle: {color:'white'}},
         titleTextStyle: {color: 'white'}
 
