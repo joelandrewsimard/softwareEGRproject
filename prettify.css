@@ -72,17 +72,17 @@ h2 {
 }
 
 #user_results{
-    color: blue;
+    color: green;
 }
 #user_results a:hover{
-    color: red;
+    color: green;
 }
 #search_results {
-    color:red;
+    color:green;
 
 }
 #search_results a{
-    color:red;
+    color:green;
     
 }
 #tracks{
@@ -92,7 +92,7 @@ h2 {
     color:green; 
 }
 #searchButton{
-    color:red;
+    color:green;
 }
 
 
