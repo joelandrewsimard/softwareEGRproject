@@ -28,6 +28,9 @@ var requestUrl = 'https://api.spotify.com/v1/browse/categories/'+genre+'/playlis
    headers: {
        'Authorization': 'Bearer ' + accessToken
    },
+   failure: function(response){
+    alert("failure!");
+   },
    success: function(response) {
     $("#playlistSelection").html("");
 $("#playlistSelection").append("<select id ='playlists'>");
