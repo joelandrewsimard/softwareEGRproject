@@ -24,12 +24,14 @@ var requestUrl = 'https://api.spotify.com/v1/browse/categories/'+genre+'/playlis
    var accessToken = localStorage.getItem("Access Token");
 
     $.ajax({
+      statusCode: {
+    402: function() {
+      alert( "page not found" );
+    }
+  }
    url: requestUrl,
    headers: {
        'Authorization': 'Bearer ' + accessToken
-   },
-   failure: function(response){
-    alert("failure!");
    },
    success: function(response) {
     $("#playlistSelection").html("");
