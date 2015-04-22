@@ -44,7 +44,7 @@ $("#playlistSelection").append("<select id ='playlists'>");
 $("#playlistSelection").append("</select>");
 
   $('#playlists').on('change', function() {
-                console.log("it changed!");
+                
                 selectPlaylist(this.value);
                 
                 });
@@ -55,7 +55,7 @@ $("#playlistSelection").append("</select>");
    },
    statusCode: {
     401: function() {
-      alert( "page not found" );
+      alert( "You must be logged in to use this feature" );
     }
   }
 });
