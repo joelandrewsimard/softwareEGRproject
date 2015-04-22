@@ -69,9 +69,7 @@ function executeSearch(){
                    }
                    else{
                
-               console.log("Getting an artist");
                
-               console.log("Getting search results");
                artistArray = data.artists.items;
                
                outputSearchResults(artistArray);
@@ -101,14 +99,13 @@ function outputSearchResults (array){
     
     for(i=0; i<array.length;i++){
         
-        console.log(array[i]);
+        
         var artistID = array[i].id;
         var href = "<a href='#' " +"onClick=artistStats('"+artistID+"'); return false;"+">"+array[i].name+"</a><br>";
         
         document.getElementById("search_results").innerHTML += href;
        
-        console.log("\n");
-        
+               
     }
 }
 
@@ -127,26 +124,15 @@ function outputSearchResults (array){
  **/
 function artistStats(id){
 
-    console.log("artistStats executed with ID "+id);
+    
     
     var url = "https://api.spotify.com/v1/artists/"+id+"/top-tracks?country=us";
 
     //get the top tracks
     jQuery.getJSON("https://api.spotify.com/v1/artists/"+id+"/top-tracks?country=us", function(data, textstatus){
-                   
-                   
-                   console.log("entered jquery");
-                   
-                                      console.log("Server request status: "+ textstatus);
-                   
-                                      console.log("Getting top tracks for artist");
-                   
-                                      console.log("Top " + data.tracks.length+ " tracks");
-                   
                                       tracks = data.tracks;
-                   
                                       printInfo(id, data.tracks);
-                                      console.log("Success in getting top tracks!");
+                                   
                                       
                    });
    
@@ -171,12 +157,7 @@ function printInfo(id, tracks){
     }
     else{
         
-        
-        
         document.getElementById("search_results").innerHTML = "";
-        console.log("Array not null");
-        
-        
         //add buttons
         $("#search_results").append("<button id='tracks'>Visualize most popular tracks</button>");
         
@@ -207,15 +188,13 @@ function printInfo(id, tracks){
             
             artistTracks[tracks[i].name] = tracks[i].popularity;
             
-            console.log(tracks[i].name);
-            
             $("#search_results").append("<h4>"+tracks[i].name+"</h4>");
             $("#search_results").append("<h5>ID:"+tracks[i].id+"</h5>");
             $("#search_results").append("<h5> Popularity: "+ tracks[i].popularity+"</h5>");
             $("#search_results").append("<h5><a href='"+tracks[i].preview_url+"'>Preview track</a></h5>");
             $("#search_results").append("<br>");
             
-            console.log("\n");
+            
             
         }
         
@@ -258,9 +237,6 @@ function getAlbums(artistID){
               
               }
               
-              console.log("The full URL is "+fullurl);
-              
-              
               $.getJSON(fullurl, function(data){
                         
                         artistAlbums={};
@@ -271,10 +247,6 @@ function getAlbums(artistID){
                         
                         }
                         
-                        
-                        console.log(artistAlbums);
-                        
-                        console.log("DRAWING THE CHART");
                         drawChart(artistAlbums,"Name","Popularity","Top Albums","albums","search_results");
                         
                         });
@@ -333,7 +305,7 @@ $.ajax({
        'Authorization': 'Bearer ' + accessToken
    },
    success: function(response) {
-       console.log(response);
+    
  $("#search_results").append("<div class='row'>"+
     "<div class='col-md-12'>"+
       "<h1>"+ response.message+"</h1>"+
@@ -367,7 +339,6 @@ $("#search_results").append("</div>");
 *
 **/
 function getPlaylistTracks(id){
-console.log("The playlist id is"+ id);
 var requestURL = "https://api.spotify.com/v1/users/spotify/playlists/"+id+"/tracks";
 var token  = localStorage["Access Token"];
 $.ajax({
@@ -376,7 +347,6 @@ $.ajax({
        'Authorization': 'Bearer ' + token
             },
    success: function(response) {
-       console.log(response);
        //make sure playlistMap is empty
     playlistMap={};
        for(i=0;i<response.items.length;i++){
@@ -388,15 +358,10 @@ $.ajax({
 
                                            }
 
-
-console.log("Playlistmap is currently! ");
-console.log(playlistMap);
 drawChart(playlistMap,"Title","Popularity","Playlist song popularity", "tracks", "search_results");
 
 
                               }
- 
-
    }
 );
 
@@ -447,7 +412,6 @@ $.ajax({
 //ensure that artist tracks is empty before putting data in it.
 artistTracks={};
 
-console.log("drawing graphs");
 for(i=0;i<response.items.length;i++){
         artistTracks[response.items[i].track.name+" by "+ response.items[i].track.artists[0].name] = response.items[i].track.popularity;
         

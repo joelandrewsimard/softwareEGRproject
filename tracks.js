@@ -1,22 +1,40 @@
+/**
+ *Name: tracks.js
+ *Description: Contains functions for tracks.html
+ *@Authors:
+ *Paul Ryan Olivar
+ *Joel Andrew Simard
+ *Matthew Ong
+ *@Since: 01/30/14
+ *
+ **/
 
-
-
+/**
+ *setListeners()
+ * Sets listeners for values of the genre selector
+ *@param none
+ * 
+ *@return none
+ *
+ *
+ **/
 function setListeners(){
 $('#genres').on('change', function() {
                 popularTracks(this.value);
                 
                 });
-    
-    //visualize overall tracks as a default
-
 }
 
 
-function overallTracks(){
-    
-    
-}
-
+/**
+ *popularTracks(genre)
+ * Gets playlist tracks for the category
+ *@param genre
+ * A music genre
+ *@return none
+ *
+ *
+ **/
 function popularTracks(genre){
     
 var requestUrl = 'https://api.spotify.com/v1/browse/categories/'+genre+'/playlists?limit=50';
@@ -49,8 +67,7 @@ $("#playlistSelection").append("</select>");
                 
                 });
         //iterate through every playlist and create a list 
-       console.log(response);
-       console.log("The ID is "+response.playlists.items[0].id);;
+      
        getPlaylistTracks(response.playlists.items[0].id);
    },
    statusCode: {
@@ -63,7 +80,15 @@ $("#playlistSelection").append("</select>");
     
     
 }
-
+/**
+ *selectPlaylist(id)
+ * Draws a Bar chart from the given data
+ *@param id
+ * ID of the playlist to be extracted
+ *@return none
+ *Gets tracks for the playlist
+ *
+ **/
 function selectPlaylist(id){
 getPlaylistTracks(id);
 }

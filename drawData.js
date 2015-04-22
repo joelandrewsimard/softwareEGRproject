@@ -1,4 +1,17 @@
 /**
+ *Name: drawData.js
+ *Description: Contains functions that draw the visualizations
+ *@Authors:
+ *Paul Ryan Olivar
+ *Joel Andrew Simard
+ *Matthew Ong
+ *@Since: 01/30/14
+ *
+ **/
+
+
+
+/**
  *drawChart(arr)
  * Draws a Bar chart from the given data
  *@param arr
@@ -11,11 +24,10 @@ function drawChart(arr,x,y,title, graphType, divID) {
     
     if (graphType==="albums"){
 
-        console.log("graph type is albums");
+        
     }
     else if(graphType==="tracks"){
-        console.log("graph type is tracks");
-        console.log(arr);
+       
     }
 
     // Create the data table.
@@ -59,19 +71,16 @@ function drawChart(arr,x,y,title, graphType, divID) {
                                             
                                             var selected = chart.getSelection();
                                             
-                                            console.log("The name of the selected is "+ data.getValue(selected[0].row, 0));
-                                            
-                                            
                                             //search for the track to find its uri
                                             
                                             for(i=0;i<tracks.length;i++){
-                                            console.log("Looking for track");
+                                            
                                             if(tracks[i].name === data.getValue(selected[0].row, 0)){
-                                            console.log("The tracks was found with uri: "+ tracks[i].uri);
+                            
                                             var uri  = tracks[i].uri;
                                             
                                             $("#charts").append('<iframe src="'+"https://embed.spotify.com/?uri="+uri+'"width="300" height="380" frameborder="0" allowtransparency="true"></iframe>');
-                                            console.log("Appended charts div");
+                                           
                                             }
                                             
                                             }
@@ -86,7 +95,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
 
                                             var selected = chart.getSelection();
                                             
-                                            console.log("The name of the selected is "+ data.getValue(selected[0].row, 0));
+                                            
                                             
                                             for(var name in albumIDS){
 
@@ -96,11 +105,11 @@ function drawChart(arr,x,y,title, graphType, divID) {
                                                 }
                                             }
 
-                                            console.log("ID is "+ID);
+                                            
                                             var url = "https://api.spotify.com/v1/albums/"+ID+"/tracks";
 
                                                 $.getJSON(url, function(data){
-                                                    console.log(data);
+                                                   
                                                     var trackArray = data.items;
                                                     tracks = trackArray;
                                                     IDarray = new Array(trackArray.length);
@@ -119,7 +128,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
 
                                                     }
 
-                                                    console.log(url);
+                                                   
                                                     $.getJSON(url,function(data){
 
                                                         //empty the artistTracks map
@@ -145,11 +154,7 @@ function drawChart(arr,x,y,title, graphType, divID) {
 
     }
     
-    function selectHandler(e) {
-        alert('A table row was selected');
-        
-        console.log(e);
-    }
+    
     
 }
 
